@@ -30,9 +30,12 @@ An example datacard submission is in the `EXO-16-056` directory.
 
 * How to get fitResults_t0 and fitResults_t1:
 
-      text2workspace.py datacard.txt  # Load your physics model with the -P option in case you do not use the standard one
+      text2workspace.py datacard.txt
+      # Load your physics model with the -P option in case you do not use the standard one
 
-      combine -M FitDiagnostics -d datacard.root -t -1 --expectSignal 0 --rMin -10 --forceRecreateNLL -n _t0  # Increase the rMin value if (rMin * Nsig + Nbackground) < 0 for any channel
+      combine -M FitDiagnostics -d datacard.root -t -1 --expectSignal 0 --rMin -10 --forceRecreateNLL -n _t0
+      # Increase the rMin value if (rMin * Nsig + Nbackground) < 0 for any channel
+
       python $CMSSW_BASE/src/HiggsAnalysis/CombinedLimit/test/diffNuisances.py  -a fitDiagnostics_t0.root -g plots_t0.root >> ./fitResults_t0 
 
       combine -M FitDiagnostics -d datacard.root -t -1 --expectSignal 1  --forceRecreateNLL -n _t1
@@ -64,14 +67,18 @@ An example datacard submission is in the `EXO-16-056` directory.
 The exotica combine contact will check datacards submitted to this repository as part of the preapproval process:
 - https://twiki.cern.ch/twiki/bin/view/CMS/ExoPreapprovalChecklist
 
+
 The communication between the analysts and the combine expert should proceed via the analysis hypernews
+
 
 The ongoing reviews will be registered in the following Google spreadsheet:
 - https://docs.google.com/spreadsheets/d/1iRHv-dN8VBSg8fEMOfMNOMtkC3Filj6_GPPEfF5CBo4/edit?usp=sharing
 
+
 Some good references from other PAGs for simple checks your datacards should pass are: 
 - https://twiki.cern.ch/twiki/bin/view/CMS/HiggsWG/HiggsPAGPreapprovalChecks
 - https://twiki.cern.ch/twiki/bin/viewauth/CMS/SUSPAGPreapprovalChecks
+
 
 There are also some nice scripts put together by Carlos Erice:
 - https://github.com/cericeci/combineScripts

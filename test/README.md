@@ -11,15 +11,15 @@ An example datacard submission is in the `EXO-16-056` directory.
 3. Copy your datacards into a folder named after your CADI line (e.g. `EXO-16-056`) with a `README.md` containing (a) special instructions or tags to set up combine (if necessary), (b) example combine command (with special options if any), and (c) expected output
 4. Create a folder named "Checks" and copy there the following four files: fitResults_t0, fitResults_t1, impacts_t0.pdf, impacts_t1.pdf
 
-   First, install the Combine CC7 release CMSSW_10_2_X - recommended version from [http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/#setting-up-the-environment-and-installation](http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/#setting-up-the-environment-and-installation)
+First, install the Combine CC7 release CMSSW_10_2_X - recommended version from [http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/#setting-up-the-environment-and-installation](http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/#setting-up-the-environment-and-installation)
 
-   Install the Combine Harvester package:
+Install the Combine Harvester package:
 
 	cd $CMSSW_BASE/src
 	git clone git@github.com:cms-analysis/CombineHarvester.git
 	scram b -j 8
 
-   Set the environment and authenticate your grid certificate:
+Set the environment and authenticate your grid certificate:
 
 	cmsenv
 	voms-proxy-init -voms cms -rfc --valid 168:0

@@ -2,14 +2,7 @@
 
 Combine datacards for CMS exotica analyses.
 
-## Steps to upload datacards
-
-An example datacard submission is in the `EXO-16-056` directory. 
-
-1. Fork this repository under your name space
-2. Clone your fork of this repository
-3. Copy your datacards into a folder named after your CADI line (e.g. `EXO-16-056`) with a `README.md` containing (a) special instructions or tags to set up combine (if necessary), (b) example combine command (with special options if any), and (c) expected output
-4. Create a folder named "Checks" and copy there the following four files: fitResults_t0, fitResults_t1, impacts_t0.pdf, impacts_t1.pdf
+## Setting up Combine:
 
 First, install the Combine CC7 release CMSSW_10_2_X - recommended version from [http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/#setting-up-the-environment-and-installation](http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/#setting-up-the-environment-and-installation)
 
@@ -24,6 +17,16 @@ Set the environment and authenticate your grid certificate:
 	cmsenv
 	voms-proxy-init -voms cms -rfc --valid 168:0
 
+Official documentation [here](http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/)
+
+## Steps to upload datacards
+
+An example datacard submission is in the `EXO-16-056` directory. 
+
+1. Fork this repository under your name space
+2. Clone your fork of this repository
+3. Copy your datacards into a folder named after your CADI line (e.g. `EXO-16-056`) with a `README.md` containing (a) special instructions or tags to set up combine (if necessary), (b) example combine command (with special options if any), and (c) expected output
+4. Create a folder named "Checks" and copy there the following four files: fitResults_t0, fitResults_t1, impacts_t0.pdf, impacts_t1.pdf
 
 * How to get fitResults_t0 and fitResults_t1:
 
@@ -56,9 +59,15 @@ Set the environment and authenticate your grid certificate:
 6. Go to Settings/Members on your fork's webpage and add the group `cms-exo-mci` with Max access level Reporter, 
 7. Submit a merge request with your updates to this repository
 
-## Additional resources 
-The exotica combine contact will check datacards submitted to this repository as part of the approval process: 
-- https://twiki.cern.ch/twiki/bin/view/CMS/ExoApprovalChecklist
+## Additional resources / information
+
+The exotica combine contact will check datacards submitted to this repository as part of the preapproval process:
+- https://twiki.cern.ch/twiki/bin/view/CMS/ExoPreapprovalChecklist
+
+The communication between the analysts and the combine expert should proceed via the analysis hypernews
+
+The ongoing reviews will be registered in the following Google spreadsheet:
+- https://docs.google.com/spreadsheets/d/1iRHv-dN8VBSg8fEMOfMNOMtkC3Filj6_GPPEfF5CBo4/edit?usp=sharing
 
 Some good references from other PAGs for simple checks your datacards should pass are: 
 - https://twiki.cern.ch/twiki/bin/view/CMS/HiggsWG/HiggsPAGPreapprovalChecks
